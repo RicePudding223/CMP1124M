@@ -51,5 +51,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Share_1_2048.txt" />
+    <Content Include="bin\Debug\Share_1_256.txt" />
+    <Content Include="bin\Debug\Share_2_2048.txt" />
+    <Content Include="bin\Debug\Share_2_256.txt" />
+    <Content Include="bin\Debug\Share_3_2048.txt" />
+    <Content Include="bin\Debug\Share_3_256.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

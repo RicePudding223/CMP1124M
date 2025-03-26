@@ -9,6 +9,10 @@ namespace CMP1124M
     {
         /// <summary>
         /// Bubble sort algorithm.
+        /// O(n^2) time complexity in worst and average cases, 
+        /// O(n) in best case (when array is already sorted).
+        /// Space complexity is O(1).
+        /// Efficient for small datasets or nearly sorted data, but impractical for large datasets.
         /// </summary>
         /// <param name="nums">The array being sorted</param>
         /// <param name="descending">Bool to decide if to sort in descending order</param>
@@ -39,8 +43,10 @@ namespace CMP1124M
         }
 
         /// <summary>
-        /// Starts the merge sort algorithm.
-        /// This is so it can make the counter variable and keep track of it.
+        /// Merge sort algorithm.
+        /// O(n log n) time complexity in all cases.
+        /// Space complexity is O(n) due to broken down arrays used in merging.
+        /// Good for large datasets.
         /// </summary>
         /// <param name="nums">The array being sorted</param>
         /// <param name="descending">Bool to decide if to sort in descending order</param>
@@ -146,6 +152,10 @@ namespace CMP1124M
 
         /// <summary>
         /// Insertion Sort algorithm
+        /// O(n^2) time complexity for worst and average cases.
+        /// O(n) for best base.
+        /// Space complexity of O(1).
+        /// Efficient for small datasets.
         /// </summary>
         /// <param name="nums">The array being sorted</param>
         /// <param name="descending">Bool to decide if to sort in descending order</param>
@@ -181,8 +191,12 @@ namespace CMP1124M
         }
 
         /// <summary>
-        /// Starts the merge sort algorithm.
-        /// This is so it can start a count variable and a new array to not modify the original.
+        /// Quick sort algorithm.
+        /// O(n^2) time complexity for worst case.
+        /// O(nlogn) for average and best case.
+        /// Space complexity is O(n) for worst case, if the pivot selection is always poor.
+        /// O(logn) for average case.
+        /// Efficent for large datasets that isn't sorted or have many duplicates.
         /// </summary>
         /// <param name="nums">The array being sorted</param>
         /// <param name="low">The starting index</param>

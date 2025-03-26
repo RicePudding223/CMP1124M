@@ -179,7 +179,7 @@ namespace CMP1124M
 
             // Asks user for search target and what algorithm to use
             int target = GetSearchTarget();
-            SearchAndDisplayResults(searching, selectedArray, sortedArray, target);
+            SearchAndDisplayResults(searching, selectedArray, sortedArray, target, isDescending);
 
             return true; // Continue the loop
         }
@@ -304,7 +304,7 @@ namespace CMP1124M
         /// <param name="originalArray">The original unsorted array that the user selected</param>
         /// <param name="sortedArray">The sorted array that the user wanted to sort</param>
         /// <param name="target">The target number the user wants to find</param>
-        static void SearchAndDisplayResults(Searching searching, int[] originalArray, int[] sortedArray, int target)
+        static void SearchAndDisplayResults(Searching searching, int[] originalArray, int[] sortedArray, int target, bool isDescending)
         {
             // Variables to store target indexes, number of comparisons, and if the search was binary
             List<int> indexes;
@@ -332,7 +332,7 @@ namespace CMP1124M
                             // If the user picked binary search then use the sorted array
                             // this is because the array needs to be sorted for binary search to work
                             Console.WriteLine("Using sorted array as the array needs to be sorted.");
-                            (indexes, count) = searching.BinarySearch(sortedArray, target);
+                            (indexes, count) = searching.BinarySearch(sortedArray, target, isDescending);
                             isBinarySearch = true;
                             break;
                         default:
